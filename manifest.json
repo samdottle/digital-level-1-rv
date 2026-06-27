@@ -1,24 +1,13 @@
 {
   "name": "Digital Level 1 RV",
   "short_name": "DL1-RV",
-  "description": "Wireless RV leveling system. MPU-6050 + ESP32 BLE. Bird's-eye bubble view with per-corner jack advisories.",
+  "description": "Wireless RV leveling system. MPU-6050 + ESP32 BLE.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0a0f1e",
   "theme_color": "#0a0f1e",
-  "orientation": "portrait-primary",
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
   ]
 }
