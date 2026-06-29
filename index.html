@@ -172,7 +172,7 @@ function BullsEye({pitch,roll,threshold,isLevel}){
   const maxH=Math.max(...heights.map(c=>c.h));
   const minH=Math.min(...heights.map(c=>c.h));
   return h('div',{style:{position:'relative',width:R*2,height:R*2,borderRadius:'16px',
-      overflow:'hidden',
+      overflow:'hidden',cursor:'default',
       background:'radial-gradient(ellipse at center,#0e1929 0%,#050810 100%)',
       boxShadow:'0 0 0 1px rgba(30,58,95,0.6),0 8px 40px rgba(0,0,0,0.7)'}},
     // Jack pins
@@ -269,7 +269,7 @@ function JackSlider({jackKey,label,value,onChange}){
         textTransform:'uppercase',letterSpacing:'0.08em'}},label),
     h('span',{style:{fontSize:'16px',fontFamily:'monospace',fontWeight:700,
         color:'#fbbf24'}},`${value.toFixed(1)}"`),
-    h('input',{type:'range',min:0,max:6,step:0.1,value,
+    h('input',{type:'range',min:0,max:6,step:0.1,defaultValue:value,
         onInput:e=>onChange(jackKey,parseFloat(e.target.value)),
         onChange:e=>onChange(jackKey,parseFloat(e.target.value))}),
     h('div',{style:{display:'flex',justifyContent:'space-between',
@@ -419,7 +419,7 @@ function App(){
             h('h1',{style:{fontSize:'22px',fontWeight:300,color:'white',margin:0,lineHeight:1}},
               'Digital Level ',h('span',{style:{fontWeight:700,color:'#fbbf24'}},'RV')),
             h('p',{style:{fontSize:'10px',color:'#475569',margin:'2px 0 0'}},
-              'MPU-6050 \u00B7 ESP32 \u00B7 BLE \u00B7 v3.3')
+              'MPU-6050 \u00B7 ESP32 \u00B7 BLE \u00B7 v3.4')
           ),
           h('div',{style:{display:'flex',alignItems:'center',gap:'5px',padding:'4px 10px',
               borderRadius:'20px',border:`1px solid ${sc}40`,background:`${sc}12`,
@@ -560,7 +560,7 @@ function App(){
         h('div',{style:{textAlign:'center',fontSize:'11px',color:'#1e3a5f',paddingTop:'4px'}},
           h('p',{style:{margin:0}},'Arduino Nano ESP32 + MPU-6050 \u00B7 BLE Nordic UART'),
           h('p',{style:{margin:'3px 0 0'}},
-            `Level tolerance \u00B1${THRESHOLD.toFixed(1)}\u00B0 \u00B7 \u00A9 Digital Level 1 RV \u00B7 v3.3`)
+            `Level tolerance \u00B1${THRESHOLD.toFixed(1)}\u00B0 \u00B7 \u00A9 Digital Level 1 RV \u00B7 v3.4`)
         )
       )
     ),
